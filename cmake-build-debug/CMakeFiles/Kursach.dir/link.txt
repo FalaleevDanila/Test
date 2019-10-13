@@ -1,1 +1,0 @@
-/usr/bin/g++-8  -g   CMakeFiles/Kursach.dir/main.cpp.o  -o Kursach -lGL /usr/lib/libGLEW.so 

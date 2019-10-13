@@ -1,3 +1,0 @@
-/home/danila/CLionProjects/Kursach/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/danila/CLionProjects/Kursach/cmake-build-debug/CMakeFiles/Kursach.dir
-/home/danila/CLionProjects/Kursach/cmake-build-debug/CMakeFiles/edit_cache.dir
