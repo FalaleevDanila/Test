@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/danila/CLionProjects/Kursach/main.cpp
+SFML/OpenGL.hpp
+-
+SFML/Graphics.hpp
+-
+GL/glu.h
+-
+
