@@ -5,14 +5,23 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Kursach main.cpp)
 
-message (INFO ${SFML_LIBRARIES})
-# Detect and add SFML
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
-#Find any version 2.X of SFML
-#See the FindSFML.cmake file for additional details and instructions
-find_package(SFML 2 REQUIRED network audio graphics window system)
-if(SFML_FOUND)
+#SFML
+find_package(SFML REQUIRED system window graphics network audio)
+if (SFML_FOUND)
     include_directories(${SFML_INCLUDE_DIR})
-    target_link_libraries(Kursach ${SFML_LIBRARIES} ${SFML_DEPENDENCIES} glu)
+    target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES})
 endif()
 
+#OPENGL
+find_package(OpenGL REQUIRED)
+if (OpenGL_FOUND)
+    include_directories(${OpenGL_INCLUDE_DIR})
+    target_link_libraries(${PROJECT_NAME} ${OpenGL_LIBRARIES})
+    target_link_libraries(${PROJECT_NAME} GL)
+endif()
+
+find_package(GLEW 2.0 REQUIRED)
+if (GLEW_FOUND)
+    include_directories(${GLEW_INCLUDE_DIR})
+    target_link_libraries(${PROJECT_NAME} ${GLEW_LIBRARIES})
+endif()
